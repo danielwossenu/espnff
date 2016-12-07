@@ -128,8 +128,12 @@ class League(object):
 
         return result
       
-      def schedule_for_sim():
-        pass
+    def schedule_for_sim(self):
+      schedule = []
+      for week in range(1,data['leaguesettings']['finalRegularSeasonMatchupPeriodId']+1):
+        for each in self.scoreboard(week):
+          schedule.append([str(each.home_team.owner),str(each.away_team.owner),each.home_score,each.away_score, week])
+      return schedule
 
 
 class Team(object):
