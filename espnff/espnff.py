@@ -127,6 +127,9 @@ class League(object):
                     matchup.away_team = team
 
         return result
+      
+      def schedule_for_sim():
+        pass
 
 
 class Team(object):
