@@ -197,3 +197,10 @@ class Matchup(object):
             self.home_score = self.data['teams'][0]['score']
             self.away_team = None
             self.away_score = None
+            
+class Settings(object):
+    def __init__(self, data):
+        self.final_week_reg = data['leaguesettings']['finalRegularSeasonMatchupPeriodId']
+        self.final_week_playoffs = data['leaguesettings']['finalMatchupPeriodId']
+        self.team_count = data['leaguesettings'][
+        self.playoff_team_count = data['leaguesettings']['playoffTeamCount']
